@@ -3,8 +3,8 @@
   #include <stdio.h>
   int c = 0, w = 0, l = 0;
 %}
-word [^ \t \n] +
-col \n
+word [^\t\n ]+
+eol \n
 %%
 {word}  {w++, c+=yyleng;};
 {eol}   {c++; l++;}
